@@ -1,0 +1,98 @@
+page{
+	background-color: #F5F5F5;
+}
+.my-header{
+	position: relative;
+	padding-bottom: 30rpx;
+	.my-header-background{
+		position: absolute;
+		left:0;
+		top:0;
+		bottom: 0;
+		right: 0;
+		opacity: .3;
+		filter: blur(16rpx);
+		image{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.my-header-logo{
+		@include flex(felx-start,column);
+		align-items: center;
+		padding-top: 60rpx;
+		position: relative;
+		z-index: 999;
+		.my-header-logo-box{
+			width: 120rpx;
+			height: 120rpx;
+			border-radius: 50%;
+			overflow: hidden;
+			image{
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.user-nane{
+			margin-top: 30rpx;
+			font-size: 30rpx;
+			font-weight: 700;
+		}
+	}
+	.my-header-info{
+		margin-top: 30rpx;
+		@include flex();
+		.my-header-info-box{
+			width: 100%;
+			@include flex(space-between,column);
+			font-size: 24rpx;
+			color: $c-9;
+			.my-header-info-title{
+				font-size: 28rpx;
+				color: #333333;
+			}
+		}
+	}
+}
+
+.my-content{
+	.my-content-list{
+		@include flex();
+		padding:30rpx;
+		margin-bottom: 20rpx;
+		background-color: #FFFFFF;
+		color: #333333;
+		font-size: 28rpx;
+		.my-content-list-title{
+			display: flex;
+			align-items: center;
+			flex-grow: 1;
+			.icon{
+				margin-right: 10rpx;
+			}
+			// app端的样式处理
+			.version-container{
+				@include flex();
+				flex-grow: 1;
+				.version{
+					margin-right: 40rpx;
+					color: #888;
+					font-weight: bold;
+				}
+				.new-version-tip{
+					color: $base-color;
+					font-size: 20rpx;
+				}
+			}
+		}
+	}
+	.sigin-out{
+		margin: 120rpx 20rpx 0;
+	}
+	.company-logo{
+		width: 100rpx;
+		height: 100rpx;
+		border-radius: 50%;
+		margin-right: 40rpx;
+	}
+}
